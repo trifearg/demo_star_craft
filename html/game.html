@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Star Craft</title>
+</head>
+
+<body>
+    <div class="game_overlay">
+        <div class="game_overlay__text"></div>
+    </div>
+    <div class="game">
+        <div class="player">
+            <span></span>
+        </div>
+        <div class="game_UI">
+            <figure>
+                <img src="crystals.svg" alt="crystals">
+                <figcaption id="crystals">0</figcaption>
+            </figure>
+            <figure>
+                <img src="workers.svg" alt="workers">
+                <div class="overlay"></div>
+                <div class="price"><button id="buyWorkers">5<img src="crystals_in_price.svg" alt="price">Buy workers</button></div>
+                <figcaption id="workers">0</figcaption>
+            </figure>
+            <figure>
+                <img src="warriors.svg" alt="warriors">
+                <div class="overlay"></div>
+                <div class="price"><button id="buyWarriors">10<img src="crystals_in_price.svg" alt="price">Buy warriors</button></div>
+                <figcaption id="warriors">0</figcaption>
+            </figure>
+        </div>
+        <div class="game_btn_fight">
+            <button id="fight">FIGHT</button>
+            <button id="skip">SKIP</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="notify.js"></script>
+</body>
+</html>
